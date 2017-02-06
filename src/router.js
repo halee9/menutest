@@ -18,6 +18,8 @@ router.get('/stores', (req, res) => {
   storeMethods.getAll().then(stores => res.json(stores));
 })
 
+
+
 // get a store by id
 router.get('/stores/:id', (req, res) => {
   Store.findById(req.params.id).exec((err, store) => {
